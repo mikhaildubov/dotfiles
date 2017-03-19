@@ -1,0 +1,51 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "editor.fontSize": 14,
+    "window.zoomLevel": -1,
+
+      // Configure glob patterns for excluding files and folders.
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/tags": true,
+        "**/*.pyc": true,
+        "**/*.p": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/bigquery_credentials.dat": true,
+        "**/__init__.py": true,
+        "**/.vagrant": true,
+        "**/.vscode": true,
+        "**/.ipynb_checkpoints": true
+    },
+    "search.exclude": {
+        "tags": true
+    },
+    "editor.rulers": [80,110],
+    "workbench.activityBar.visible": true,
+    "workbench.statusBar.visible": false,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "python.linting.pylintEnabled": true,
+    "python.linting.pylintPath": "pylint",
+ //   "python.linting.pylintArgs": ["--disable=C,R,W"],
+    "python.linting.pylintArgs": ["-j4"],  // use 4 cores
+    "python.linting.pep8Enabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": [],
+    "python.linting.flake8Path": "flake8",
+    "python.formatting.provider": "yapf",
+    "python.formatting.yapfArgs": [],
+    "editor.fontLigatures": true,
+    "editor.formatOnType": false,
+    "python.formatting.formatOnSave": false,
+    "editor.formatOnPaste": false,
+    "debug.inlineValues": true,
+    "python.pythonPath": "python",
+    "workbench.colorTheme": "Monokai",
+    "workbench.iconTheme": "vscode-great-icons",
+    "editor.minimap.enabled": true,
+    "extensions.autoUpdate": true,
+    "python.sortImports.path": "isort",
+    "python.sortImports.args": []
+}
