@@ -113,11 +113,14 @@ alias h='history'
 alias lsr='tree'
 alias gg='git grep'
 alias s='subl'
+alias tree='tree -I ".git"'
+
+
 
 export PAGER="/usr/bin/less -S" # no word-wrap in psql outputs
 
-export PATH="~/lib/anaconda2/bin:$PATH"
-export PATH="~/bin:$PATH"
+export PATH="$HOME/lib/anaconda2/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
 export CURL_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
 
 GIT_PROMPT_ONLY_IN_REPO=1
@@ -130,15 +133,16 @@ export VISUAL=vim
 
 # Customize prompt with colors, git info and Python env info
 export PS1='$FG[049]%n@%M%f %* %B$FG[051]%~%b $(git_prompt_info)'$'\n''${ret_status}%{$reset_color%}'
+
 if [ $HOST = "taf2" ]; then
+    # Extra aliased taf2 specific
+    source $HOME/.zshrc_taf2
+
     source activate quantdata
     export PS1='$FG[046]'$PS1
 
     # The next line updates PATH for the Google Cloud SDK.
-    source '~/lib/google-cloud-sdk/path.zsh.inc'
+    source "$HOME/lib/google-cloud-sdk/path.zsh.inc"
     # The next line enables shell command completion for gcloud.
-    source '~/lib/google-cloud-sdk/completion.zsh.inc'
-
-    # Extra aliased taf2 specific
-    source ~/.zshrc_taf2
+    source "$HOME/lib/google-cloud-sdk/completion.zsh.inc"
 fi

@@ -1,0 +1,7 @@
+cd $HOME/www
+
+# PYTHON 3
+# $HOME/lib/anaconda3/bin/python -m http.server
+
+# Python 2
+$HOME/lib/anaconda2/bin/python -m SimpleHTTPServer
