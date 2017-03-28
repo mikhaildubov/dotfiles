@@ -146,9 +146,8 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Experimental locking screens
-#exec --no-startup-id xset dpms 600
-#exec --no-startup-id xautolock -time 300 -locker i3lock
+# Auto locking screens (time in minutes)
+exec --no-startup-id xautolock -time 1 -locker ~/bin/lock.sh
 
 # Change keyboard layout
 set $keyboardMode "keyboard e=ee, u=us, f=fr"
