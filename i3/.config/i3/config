@@ -147,7 +147,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Auto locking screens (time in minutes)
-exec --no-startup-id xautolock -time 1 -locker ~/bin/lock.sh
+exec --no-startup-id xautolock -time 10 -locker ~/bin/lock.sh
 
 # Change keyboard layout
 set $keyboardMode "keyboard e=ee, u=us, f=fr"
