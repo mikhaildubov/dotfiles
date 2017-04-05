@@ -76,17 +76,17 @@ bindsym $mod+F4 exec i3-sensible-terminal -e "ipython"
 bindsym $mod+F9 exec "i3-nagbar -t error -m 'Killall notebook server?' -b 'Yes' 'exec killall jupyter-notebook'"
 bindsym $mod+F11 fullscreen
 bindsym $mod+F12 exec i3lock -c 000000 # Lock
-bindsym control+Mod1+Delete exec i3lock -c 000000 # Lock
+bindsym control+Mod1+Delete exec ~/bin/lock.sh # Fancier Lock
 bindsym Pause exec ~/bin/lock.sh # Fancier Lock
 bindsym Print exec shutter -s --disable_systray -e # Screenshot
 # bindsym Mod1+v exec diodon
 
 
 # Microsoft Natural keyborad
-bindsym XF86Launch5 exec i3-sensible-terminal #  Button 1
+bindsym XF86Launch5 exec i3-sensible-terminal -e "ipython" # Button 1
 bindsym XF86Launch6 exec google-chrome-stable #  Button 2
 bindsym XF86Launch7 exec thunar #  Button 3
-bindsym XF86Launch8 exec i3-sensible-terminal -e "ipython" # Button 4
+bindsym XF86Launch8 exec notebook-server # Button 4
 bindsym XF86Launch9 exec "i3-nagbar -t error -m 'Killall notebook server?' -b 'Yes' 'exec killall jupyter-notebook'"
 # bindsym XF86Launch9 exec
 bindsym XF86HomePage workspace 1
