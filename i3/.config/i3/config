@@ -52,11 +52,10 @@ workspace 7 output $screen_left
 workspace 8 output $screen_middle
 workspace 9 output $screen_right
 
-# exec --no-startup-id i3-msg 'workspace 1; exec thunar'
 exec --no-startup-id i3-msg 'workspace 1; exec i3-sensible-terminal'
-exec --no-startup-id i3-msg 'workspace 1; exec i3-sensible-terminal'
-exec --no-startup-id i3-msg 'workspace 2; exec /usr/bin/google-chrome-stable'
-exec --no-startup-id i3-msg 'workspace 3; exec code'
+# exec --no-startup-id i3-msg 'workspace 1; exec i3-sensible-terminal'
+# exec --no-startup-id i3-msg 'workspace 2; exec /usr/bin/google-chrome-stable'
+# exec --no-startup-id i3-msg 'workspace 3; exec code'
 
 ################################################################################
 # Start up
@@ -83,8 +82,8 @@ bindsym Print exec shutter -s --disable_systray -e # Screenshot
 
 
 # Microsoft Natural keyborad
-bindsym XF86Launch5 exec i3-sensible-terminal -e "ipython" # Button 1
-bindsym XF86Launch6 exec google-chrome-stable #  Button 2
+bindsym XF86Launch5 exec google-chrome-stable #  Button 1
+#bindsym XF86Launch6 exec i3-sensible-terminal -e "ipython" # Button 2
 bindsym XF86Launch7 exec thunar #  Button 3
 bindsym XF86Launch8 exec notebook-server # Button 4
 bindsym XF86Launch9 exec "i3-nagbar -t error -m 'Killall notebook server?' -b 'Yes' 'exec killall jupyter-notebook'"

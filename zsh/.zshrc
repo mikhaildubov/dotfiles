@@ -74,7 +74,7 @@ source $ZSH/oh-my-zsh.sh
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+export SSH_KEY_PATH="~/.ssh/id_rsa"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -109,19 +109,21 @@ alias m='less'
 alias top='htop'
 alias e='exit'
 alias c='code' # visual studio code
-alias h='history'
+alias hh='history'
+alias h='fc -il -l -20' # last 20 of history
 alias lsr='tree'
 alias gg='git grep'
 alias s='subl'
 alias tree='tree -I ".git"'
-
-
 
 export PAGER="/usr/bin/less -S" # no word-wrap in psql outputs
 
 export PATH="$HOME/lib/anaconda2/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 export CURL_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
+
+# manually installed tex for notebook https://nbconvert.readthedocs.io/en/latest/install.html#installing-tex.
+export PATH="/usr/local/texlive/2016/bin/x86_64-linux:$PATH"
 
 GIT_PROMPT_ONLY_IN_REPO=1
 
