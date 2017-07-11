@@ -148,3 +148,7 @@ if [ $HOST = "taf2" ]; then
     # The next line enables shell command completion for gcloud.
     source "$HOME/lib/google-cloud-sdk/completion.zsh.inc"
 fi
+
+# Remap the CAPSLOCK key
+setxkbmap -option caps:none
+#setxkbmap -option caps:escape

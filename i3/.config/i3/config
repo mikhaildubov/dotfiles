@@ -37,7 +37,7 @@ font pango: Ubuntu Mono 10
 
 ###### Work Desktop
 exec --no-startup-id numlockx on
-exec --no-startup-id ~/bin/set_screen_positions.sh
+exec --no-startup-id ~/bin/set_screen_positions.sh # use arandr to gen this file
 set $screen_left DP1
 set $screen_middle DP2
 set $screen_right HDMI1
@@ -99,7 +99,7 @@ bindsym XF86Favorites exec dmenu_run
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
-bindsym XF86Calculator exec --no-startup-id speedcrunch
+bindsym XF86Calculator exec --no-startup-id gnome-calculator # or speedcrunch
 
 ################################################################################
 # i3 shortcuts
