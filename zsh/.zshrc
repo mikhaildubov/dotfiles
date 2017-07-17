@@ -108,13 +108,27 @@ alias less='less -S'
 alias m='less'
 alias top='htop'
 alias e='exit'
-alias c='code' # visual studio code
+alias c='code -r' # visual studio code with -r to force reusing existing window
 alias hh='history'
 alias h='fc -il -l -20' # last 20 of history
 alias lsr='tree'
-alias gg='git grep'
 alias s='subl'
 alias tree='tree -I ".git"'
+
+alias gg='git grep'
+alias gl='git log'
+alias gs='git status'
+alias gsb='git status -sb'
+alias ga='git add'
+alias gap='git add --patch'
+alias gb='git branch'
+alias gbd='git branch -d'
+alias gcb='git checkout -b'
+alias gcm='git checkout master'
+alias gcmsg='git commit -m'
+alias gco='git checkout'
+alias gd='git diff'
+
 
 export PAGER="/usr/bin/less -S" # no word-wrap in psql outputs
 
@@ -148,3 +162,7 @@ if [ $HOST = "taf2" ]; then
     # The next line enables shell command completion for gcloud.
     source "$HOME/lib/google-cloud-sdk/completion.zsh.inc"
 fi
+
+# Remap the CAPSLOCK key
+setxkbmap -option caps:none
+#setxkbmap -option caps:escape

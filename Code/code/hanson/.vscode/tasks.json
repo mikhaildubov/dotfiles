@@ -1,0 +1,23 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "taskName": "run poisson tests",
+            // "command": "crane/crane dev:mm tests.unittests:hanson/pricing/poisson/tests/test_models.py",
+            "command": "crane dev:mm tests.unittests:${relativeFile}",
+            "type": "shell",
+            "group":{
+                "kind": "test",
+                "isDefault": true
+            },
+            "presentation" :{
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "dedicated"
+            }
+        }
+    ]
+}
