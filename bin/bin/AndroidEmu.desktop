@@ -1,0 +1,10 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon[en_GB]=android-arc
+Name[en_GB]=AndroidEmu
+Exec=/home/pierre/Android/Sdk/tools/emulator -avd Nexus_5X_API_24 
+Name=AndroidEmu
+Icon=android-arc
