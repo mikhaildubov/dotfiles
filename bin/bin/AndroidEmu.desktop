@@ -5,6 +5,9 @@ Type=Application
 Terminal=false
 Icon[en_GB]=android-arc
 Name[en_GB]=AndroidEmu
-Exec=~/Android/Sdk/tools/emulator -avd Nexus_5X_API_24 
+Exec=/home/pierre/Android/Sdk/tools/emulator -avd Nexus_5X_API_24
 Name=AndroidEmu
 Icon=android-arc
+# Nexus_5X_API_24
+# Pixel_C_API_26
+# Pixel_XL_API_26
