@@ -125,10 +125,10 @@ alias gb='git branch'
 alias gbd='git branch -d'
 alias gcb='git checkout -b'
 alias gcm='git checkout master'
-alias gcmsg='git commit -m'
+alias gc='git commit -m'
 alias gco='git checkout'
 alias gd='git diff'
-
+alias greb='curbranch=`git rev-parse --abbrev-ref HEAD`; git stash; git checkout master; git pull; git co $curbranch; git rebase master; git stash pop' # pull and rebase on master
 
 export PAGER="/usr/bin/less -S" # no word-wrap in psql outputs
 
@@ -150,7 +150,7 @@ export VISUAL=vim
 # Customize prompt with colors, git info and Python env info
 export PS1='$FG[049]%n@%M%f %* %B$FG[051]%~%b $(git_prompt_info)'$'\n''${ret_status}%{$reset_color%}'
 
-if [ $HOST = "taf2" ]; then
+if [ $HOST = "taf2" ]; then # taf2 is Pierre's computer name
     # Extra aliased taf2 specific
     source $HOME/.zshrc_taf2
 
@@ -165,4 +165,7 @@ fi
 
 # Remap the CAPSLOCK key
 setxkbmap -option caps:none
-#setxkbmap -option caps:escape
+setxkbmap -option caps:escape
+
+# Pluggin to autosuggest
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
