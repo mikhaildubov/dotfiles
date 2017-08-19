@@ -1,0 +1,40 @@
+[global_config]
+  inactive_color_offset = 0.73
+  suppress_multiple_term_dialog = True
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    background_darkness = 0.93
+    background_image = None
+    copy_on_selection = True
+    scrollback_infinite = True
+    show_titlebar = False
+  [[blue]]
+    background_image = None
+    copy_on_selection = True
+    foreground_color = "#666fe4"
+    scrollback_infinite = True
+    show_titlebar = False
+  [[green]]
+    background_darkness = 0.93
+    background_image = None
+    copy_on_selection = True
+    foreground_color = "#00ff00"
+    scrollback_infinite = True
+    show_titlebar = False
+  [[orange]]
+    background_darkness = 0.9
+    background_image = None
+    copy_on_selection = True
+    foreground_color = "#e53c00"
+    scrollback_infinite = True
+    show_titlebar = False
