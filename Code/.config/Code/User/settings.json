@@ -70,6 +70,7 @@
     "markdown.preview.scrollEditorWithPreview": false,
     "cSpell.userWords": [
         "PARTITIONTIME",
+        "PYTHONPATH",
         "Reindex",
         "Uploader",
         "amazonaws",
@@ -113,6 +114,7 @@
         "jointplot",
         "jupyter",
         "kendalltau",
+        "keychain",
         "matplotlib",
         "messagelogredshiftcluster",
         "mijbil",

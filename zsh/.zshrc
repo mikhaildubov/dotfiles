@@ -130,9 +130,6 @@ alias gco='git checkout'
 alias gd='git diff'
 alias greb='curbranch=`git rev-parse --abbrev-ref HEAD`; git stash; git checkout master; git pull; git co $curbranch; git rebase master; git stash pop' # pull and rebase on master
 
-alias logs="multitail -CS hanson_logs --mergeall /var/log/docker/*/$(date +'%Y-%m-%d').$(hostname).log"
-
-
 export PAGER="/usr/bin/less -S" # no word-wrap in psql outputs
 
 export PATH="$HOME/lib/anaconda2/bin:$PATH"
@@ -153,7 +150,7 @@ export VISUAL=vim
 # Customize prompt with colors, git info and Python env info
 export PS1='$FG[049]%n@%M%f %* %B$FG[051]%~%b $(git_prompt_info)'$'\n''${ret_status}%{$reset_color%}'
 
-if [ $HOST = "taf2" ]; then # taf2 is Pierre's computer name
+if [ $HOST = "taf2" ]; then
     # Extra aliased taf2 specific
     source $HOME/.zshrc_taf2
 
@@ -164,11 +161,17 @@ if [ $HOST = "taf2" ]; then # taf2 is Pierre's computer name
     source "$HOME/lib/google-cloud-sdk/path.zsh.inc"
     # The next line enables shell command completion for gcloud.
     source "$HOME/lib/google-cloud-sdk/completion.zsh.inc"
+
+    # Remap the CAPSLOCK key
+    setxkbmap -option caps:none
+    setxkbmap -option caps:escape
+
+    alias logs="multitail -CS my_logs --mergeall ~/log/*.log" # not so usefull
 fi
 
-# Remap the CAPSLOCK key
-setxkbmap -option caps:none
-setxkbmap -option caps:escape
+if [ $USERNAME = "vagrant" -o $HOST = "mm" ]; then
+    alias logs="multitail -CS my_logs --mergeall /var/log/docker/*/$(date +'%Y-%m-%d').$(hostname).log"
+fi
 
 # Pluggin to autosuggest
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
