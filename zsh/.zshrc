@@ -1,10 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
 ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use case-sensitive completion.
@@ -27,10 +23,10 @@ ZSH_THEME="robbyrussell"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -150,7 +146,14 @@ export VISUAL=vim
 # unset QT_QPA_PLATFORMTHEME
 
 # Customize prompt with colors, git info and Python env info
-export PS1='$FG[049]%n@%M%f %* %B$FG[051]%~%b $(git_prompt_info)'$'\n''${ret_status}%{$reset_color%}'
+PS1_LOGIN_COLOR="049"
+if [ $USERNAME = "vagrant" ]; then
+    PS1_LOGIN_COLOR="226"
+fi
+if [ $HOST = "mm" ]; then
+    PS1_LOGIN_COLOR="160"
+fi
+export PS1='$FG['$PS1_LOGIN_COLOR']%n@%M%f %* %B$FG[051]%~%b $(git_prompt_info)'$'\n''${ret_status}%{$reset_color%}'
 
 if [ $HOST = "taf2" ]; then
     # Extra aliased taf2 specific
@@ -175,5 +178,16 @@ if [ $USERNAME = "vagrant" -o $HOST = "mm" ]; then
     alias logs="multitail -CS my_logs --mergeall /var/log/docker/*/$(date +'%Y-%m-%d').$(hostname).log"
 fi
 
+
 # Pluggin to autosuggest
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+
+
+# if [  = vagrant ]; then
+#     ZSH_THEME=robbyrussell
+# fi
+
+# if [  = mm ]; then
+#     ZSH_THEME=robbyrussell
+# fi
