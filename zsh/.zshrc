@@ -130,6 +130,9 @@ alias gco='git checkout'
 alias gd='git diff'
 alias greb='curbranch=`git rev-parse --abbrev-ref HEAD`; git stash; git checkout master; git pull; git co $curbranch; git rebase master; git stash pop' # pull and rebase on master
 
+alias logs="multitail -CS hanson_logs --mergeall /var/log/docker/*/$(date +'%Y-%m-%d').$(hostname).log"
+
+
 export PAGER="/usr/bin/less -S" # no word-wrap in psql outputs
 
 export PATH="$HOME/lib/anaconda2/bin:$PATH"

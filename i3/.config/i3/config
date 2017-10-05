@@ -27,27 +27,27 @@ font pango: Ubuntu Mono 10
 #exec --no-startup-id numlockx on
 
 ###### Home Laptop
-exec --no-startup-id nm-applet
-exec --no-startup-id numlockx off
-bindsym XF86MonBrightnessDown exec xbacklight -steps 1 -time 0 -dec 5
-bindsym XF86MonBrightnessUp exec xbacklight -steps 1 -time 0 -inc 10
+# exec --no-startup-id nm-applet
+# exec --no-startup-id numlockx off
+# bindsym XF86MonBrightnessDown exec xbacklight -steps 1 -time 0 -dec 5
+# bindsym XF86MonBrightnessUp exec xbacklight -steps 1 -time 0 -inc 10
 
 ###### Work Desktop
-# exec --no-startup-id numlockx on
-# exec --no-startup-id ~/bin/set_screen_positions.sh # use arandr to gen this file
-# set $screen_left DP1
-# set $screen_middle DP2
-# set $screen_right HDMI1
+exec --no-startup-id numlockx on
+exec --no-startup-id ~/bin/set_screen_positions.sh # use arandr to gen this file
+set $screen_left DP1
+set $screen_middle DP2
+set $screen_right HDMI1
 
-# workspace 1 output $screen_left
-# workspace 2 output $screen_middle
-# workspace 3 output $screen_right
-# workspace 4 output $screen_left
-# workspace 5 output $screen_middle
-# workspace 6 output $screen_right
-# workspace 7 output $screen_left
-# workspace 8 output $screen_middle
-# workspace 9 output $screen_right
+workspace 1 output $screen_left
+workspace 2 output $screen_middle
+workspace 3 output $screen_right
+workspace 4 output $screen_left
+workspace 5 output $screen_middle
+workspace 6 output $screen_right
+workspace 7 output $screen_left
+workspace 8 output $screen_middle
+workspace 9 output $screen_right
 
 ################################################################################
 # Start up
