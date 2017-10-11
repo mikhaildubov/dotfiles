@@ -153,6 +153,9 @@ fi
 if [ $HOST = "mm" ]; then
     PS1_LOGIN_COLOR="160"
 fi
+if [ $HOST = "quant" ]; then
+    PS1_LOGIN_COLOR="106"
+fi
 export PS1='$FG['$PS1_LOGIN_COLOR']%n@%M%f %* %B$FG[051]%~%b $(git_prompt_info)'$'\n''${ret_status}%{$reset_color%}'
 
 if [ $HOST = "taf2" ]; then
@@ -178,16 +181,5 @@ if [ $USERNAME = "vagrant" -o $HOST = "mm" ]; then
     alias logs="multitail -CS my_logs --mergeall /var/log/docker/*/$(date +'%Y-%m-%d').$(hostname).log"
 fi
 
-
 # Pluggin to autosuggest
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-
-
-# if [  = vagrant ]; then
-#     ZSH_THEME=robbyrussell
-# fi
-
-# if [  = mm ]; then
-#     ZSH_THEME=robbyrussell
-# fi
