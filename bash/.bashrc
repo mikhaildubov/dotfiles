@@ -140,3 +140,6 @@ unset QT_QPA_PLATFORMTHEME
 # added by Anaconda2 4.3.0 installer
 export PATH="/home/pierre/lib/anaconda2/bin:$PATH"
 alias logs='multitail -CS hanson_logs --mergeall /var/log/docker/*/2017-10-04.taf2.log'
+
+export SHELL=/bin/zsh
+exec /bin/zsh -l
