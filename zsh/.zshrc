@@ -150,7 +150,7 @@ PS1_LOGIN_COLOR="049"
 if [ $USERNAME = "vagrant" ]; then
     PS1_LOGIN_COLOR="226"
 fi
-if [ $HOST = "mm" ]; then
+if [ $HOST = "mm" -o $HOST = "hanson-mm" -o $HOST = "hanson-gateways" ]; then
     PS1_LOGIN_COLOR="160"
 fi
 if [ $HOST = "quant" ]; then
@@ -177,7 +177,7 @@ if [ $HOST = "taf2" ]; then
     alias logs="multitail -CS my_logs --mergeall ~/log/*.log" # not so usefull
 fi
 
-if [ $USERNAME = "vagrant" -o $HOST = "mm" ]; then
+if [ $USERNAME = "vagrant" -o $HOST = "mm" -o $HOST = "hanson-mm" -o $HOST = "hanson-gateways" ]; then
     alias logs="multitail -CS my_logs --mergeall /var/log/docker/*/$(date +'%Y-%m-%d').$(hostname).log"
 fi
 
