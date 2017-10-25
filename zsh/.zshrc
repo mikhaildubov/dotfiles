@@ -124,6 +124,8 @@ alias gcm='git checkout master'
 alias gc='git commit -m'
 alias gco='git checkout'
 alias gd='git diff'
+alias gp='git pull'
+alias gs='git show'
 alias greb='curbranch=`git rev-parse --abbrev-ref HEAD`; git stash; git checkout master; git pull; git co $curbranch; git rebase master; git stash pop' # pull and rebase on master
 
 alias dps='docker ps --format "table {{.Names}}\t{{.Status}}\t{{.RunningFor}}"'
