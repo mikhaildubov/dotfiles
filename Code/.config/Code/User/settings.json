@@ -111,6 +111,7 @@
         "dtstart",
         "dtype",
         "dtypes",
+        "etree",
         "ffill",
         "figsize",
         "fillna",
@@ -141,6 +142,7 @@
         "kendalltau",
         "keychain",
         "leguyader",
+        "luigid",
         "maltabot",
         "matplotlib",
         "mbook",
@@ -168,6 +170,7 @@
         "pylint",
         "pyplot",
         "pytest",
+        "qgrid",
         "qtty",
         "quantdata",
         "rball",
@@ -194,6 +197,7 @@
         "tzinfo",
         "unicodecsv",
         "vanlennep",
+        "whos",
         "wmid",
         "wmids",
         "xlabel",
@@ -203,5 +207,15 @@
     ],
     "cSpell.language": "en,en-GB,en-US",
     "gitlens.codeLens.enabled": false,
-    "workbench.editor.enablePreview": false
+    "workbench.editor.enablePreview": false,
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressUpdateNotice": false,
+        "suppressWelcomeNotice": true
+    }
 }
