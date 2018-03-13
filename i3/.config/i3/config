@@ -58,6 +58,7 @@ exec --no-startup-id xbindkeys -f ~/.xbindkeysrc # Mouse extra button to <Ctrl>+
 exec --no-startup-id /usr/bin/unclutter -idle 1 & # hide mouse pointer
 exec --no-startup-id parcellite # clipboard manager
 exec --no-startup-id xautolock -time 10 -locker ~/bin/lock.sh # Auto locking screens (time in minutes)
+exec --no-startup-id ~/.Xmodmap # Insert key becomes 'enter'
 
 ################################################################################
 # Programs Shortucts
@@ -67,7 +68,9 @@ bindsym $mod+F1 exec i3-sensible-terminal
 bindsym $mod+F2 exec google-chrome-stable
 bindsym $mod+F3 exec thunar # File explorer
 bindsym $mod+F4 exec notebook-server # Button 4
-bindsym $mod+F5 exec "i3-nagbar -t error -m 'Killall notebook server?' -b 'Yes' 'exec killall jupyter-notebook'"
+bindsym $mod+F5 exec "i3-nagbar -t error -m 'killall jupyter-notebook?' -b 'Yes' 'exec killall jupyter-notebook'"
+bindsym $mod+F6 exec "i3-nagbar -t error -m 'killall jupyter-lab?' -b 'Yes' 'exec killall jupyter-lab'"
+
 
 bindsym $mod+F11 fullscreen
 bindsym Pause exec ~/bin/lock.sh # Fancier Lock
@@ -175,7 +178,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 ############################### Focus
-# switch to workspace
+# # switch to workspace
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
 bindsym $mod+3 workspace 3
@@ -194,15 +197,15 @@ bindsym $mod+KP_6 workspace 6
 bindsym $mod+KP_7 workspace 7
 bindsym $mod+KP_8 workspace 8
 bindsym $mod+KP_9 workspace 9
+bindsym $mod+m workspace 1
+bindsym $mod+comma workspace 2
+bindsym $mod+period workspace 3
 bindsym $mod+u workspace 7
 bindsym $mod+i workspace 8
 bindsym $mod+o workspace 9
 bindsym $mod+j workspace 4
 bindsym $mod+k workspace 5
 bindsym $mod+l workspace 6
-bindsym $mod+m workspace 1
-bindsym $mod+comma workspace 2
-bindsym $mod+period workspace 3
 bindsym $mod+x workspace 1
 bindsym $mod+c workspace 2
 bindsym $mod+v workspace 3
@@ -232,15 +235,15 @@ bindsym $mod+Shift+KP_6 move container to workspace 6
 bindsym $mod+Shift+KP_7 move container to workspace 7
 bindsym $mod+Shift+KP_8 move container to workspace 8
 bindsym $mod+Shift+KP_9 move container to workspace 9
-bindsym $mod+Shift+u move container to workspace 7
-bindsym $mod+Shift+i move container to workspace 8
-bindsym $mod+Shift+o move container to workspace 9
-bindsym $mod+Shift+j move container to workspace 4
-bindsym $mod+Shift+k move container to workspace 5
-bindsym $mod+Shift+l move container to workspace 6
 bindsym $mod+Shift+m move container to workspace 1
 bindsym $mod+Shift+comma move container to workspace 2
 bindsym $mod+Shift+period move container to workspace 3
+bindsym $mod+Shift+j move container to workspace 4
+bindsym $mod+Shift+k move container to workspace 5
+bindsym $mod+Shift+l move container to workspace 6
+bindsym $mod+Shift+u move container to workspace 7
+bindsym $mod+Shift+i move container to workspace 8
+bindsym $mod+Shift+o move container to workspace 9
 bindsym $mod+Shift+x move container to workspace 1
 bindsym $mod+Shift+c move container to workspace 2
 bindsym $mod+Shift+v move container to workspace 3
